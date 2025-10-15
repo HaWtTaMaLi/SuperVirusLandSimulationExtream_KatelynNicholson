@@ -10,7 +10,7 @@ namespace SuperVirusLandSimulationExtream_KatelynNicholson
     //virus (x, y) build index for each virus that spawns
     //grass = green = -
     //water = blue = ~ 
-    //mountains = Brown = ^
+    //mountains = Gray = ^
     //3 starting viruses on grass
 
     internal class Program
@@ -20,7 +20,7 @@ namespace SuperVirusLandSimulationExtream_KatelynNicholson
         static string grassAvatar = "-";
         static string waterAvatar = "~";
         static string mountainAvatar = "^";
-        static bool[,] map = new bool[20,20];
+        static char[,] map = new char[20,20];
 
         static void Main()
         {
@@ -35,7 +35,7 @@ namespace SuperVirusLandSimulationExtream_KatelynNicholson
 
                 for (int x = 1; x < map.GetLength(1); x++)
                 {
-                    bool tile = map[y,x];
+                    char tile = map[y,x];
                     
                     switch (tile)
                     {
