@@ -21,6 +21,7 @@ namespace SuperVirusLandSimulationExtream_KatelynNicholson
         static string waterAvatar = "~";
         static string mountainAvatar = "^";
         static char[,] map = new char[20,20];
+        List<int> virusData = new List<int>();
 
         static void Main()
         {
@@ -52,6 +53,19 @@ namespace SuperVirusLandSimulationExtream_KatelynNicholson
                     Console.Write(tile);
                 }
             }
+        }
+
+        static void GetVirusData(string virusData)
+        {
+            //save locations on the map that the virus touched and store it
+        }
+
+        static void VirusSpawner()
+        {
+            //check virus data and check to see if virus location was stored
+            //if yes - 10% chance to spawn there if no virus 
+            //if no - normal random gen
+            //check to see if a virus is already stored
         }
 
     }
