@@ -20,7 +20,29 @@ namespace SuperVirusLandSimulationExtream_KatelynNicholson
         static string grassAvatar = "-";
         static string waterAvatar = "~";
         static string mountainAvatar = "^";
-        static char[,] map = new char[20,20];
+        //static char[,] map = new char[20, 20];
+        static char[,] map = { 
+            {'^','^','-','-','-','-','-','~','~',
+                '~','^','^','-','-','-','-','-','~',
+                '~','~','^','^','-','-','-','-','-',
+                '~','~','~','^','^','-','-','-','-','-','~','~','~',},
+            {'-','-','-','-','-','-','-','-','~','~',
+                '-','-','-','-','-','-','-','-','~','~',
+                '-','-','-','-','-','-','-','-',
+                '-','-','-','-','-','-','-','-','-','-','-','-',},
+            {'-','-','-','-','-','-','-','-','-','-',
+                '-','-','-','-','-','-','-','-','-','-',
+                '-','~','~','~','-','-','-','-','-','-','-',
+                '~','~','~','-','-','-','-','-','-',},
+            {'-','~','~','~','-','-','^','^','-','-','-',
+                '~','~','~','-','-','^','^','-','-','^',
+                '^','-','-','-','-','-','~','~','~','^',
+                '^','-','-','-','-','-','~','~','~',},
+            {'-','~','~','~','-','-','-','-','-','-','-',
+                '~','~','~','-','-','-','-','-','-','-',
+                '-','-','-','-','-','-','-','-','-','-',
+                '-','-','-','-','-','-','-','-','-',}
+        };
         List<int> virusData = new List<int>();
 
         static void Main()
@@ -34,10 +56,10 @@ namespace SuperVirusLandSimulationExtream_KatelynNicholson
             for (int y = 0; y < map.GetLength(0); y++)
             {
 
-                for (int x = 1; x < map.GetLength(1); x++)
+                for (int x = 0; x < map.GetLength(1); x++)
                 {
-                    char tile = map[y,x];
-                    
+                    char tile = map[y, x];
+
                     switch (tile)
                     {
                         case '-':
@@ -52,7 +74,9 @@ namespace SuperVirusLandSimulationExtream_KatelynNicholson
                     }
                     Console.Write(tile);
                 }
+                Console.WriteLine("");
             }
+            Console.BackgroundColor = ConsoleColor.Black;
         }
 
         static void GetVirusData(string virusData)
